@@ -356,6 +356,8 @@ body {
     color: #333;
 }
 
+
+
 .spotlight-section,
 .head-departments-section {
     padding: 40px;
@@ -757,76 +759,403 @@ body {
 /* Navbar */
 
 
-.navbar-menu ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+/* Updated and Enhanced Media Queries */
+@media screen and (max-width: 1024px) {
+    /* Navbar adjustments */
+    .navbar-top {
+        padding: 10px;
+    }
+
+    .visitor-info {
+        margin-left: 20px;
+    }
+
+    /* Dashboard adjustments */
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15px;
+    }
+
+    .glance-card {
+        grid-column: span 1;
+    }
+
+    /* Carousels */
+    .spotlight-carousel,
+    .departments-carousel,
+    .events-carousel {
+        gap: 15px;
+        padding: 5px;
+    }
+
+    .spotlight-item img,
+    .department-item img {
+        width: 250px;
+        height: 160px;
+    }
 }
 
-.navbar-menu ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
+@media screen and (max-width: 768px) {
+    /* Navbar mobile styling */
+    .navbar-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo-container {
+        margin: 5px 0;
+    }
+
+    .visitor-info {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .search-container {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Navigation menu */
+    .navbar-menu ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .navbar-menu ul li {
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Container sections */
+    .container {
+        padding: 10px;
+    }
+
+    .news-section,
+    .events-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .vertical-divider {
+        display: none;
+    }
+
+    /* Plant manager section */
+    .plant-manager-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .plant-manager-image img {
+        width: 200px;
+    }
+
+    .section-title {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    /* Dashboard */
+    .dashboard {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
-/* Make images responsive */
+@media screen and (max-width: 480px) {
+    /* Further refinements for small screens */
+    .hazira-text {
+        font-size: 16px;
+    }
+
+    .plant-text {
+        font-size: 14px;
+    }
+
+    .search-container input {
+        width: 100%;
+    }
+
+    /* Carousels */
+    .spotlight-item img,
+    .department-item img {
+        width: 200px;
+        height: 140px;
+    }
+
+    .event img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Orders section */
+    .order-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .order-item .icon {
+        margin-bottom: 10px;
+    }
+
+    .new-badge {
+        margin-top: 10px;
+    }
+
+    /* Duty container */
+    .duty-container {
+        width: 100%;
+    }
+}
+
+/* Additional responsive improvements */
+* {
+    box-sizing: border-box;
+}
+
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .navbar-menu ul {
-        flex-wrap: wrap;
-    }
-
-    .container {
-        flex-direction: column;
-    }
+button {
+    touch-action: manipulation;
 }
 
-@media (max-width: 768px) {
-    .navbar-menu ul {
-        display: none;
-    }
-
-    .navbar .actions {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .container {
-        flex-direction: column;
-    }
-
-    .news-section, .events-section, .dashboard, .spotlight-section {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
+/* Updated and Enhanced Media Queries */
+@media screen and (max-width: 1024px) {
+    /* Navbar adjustments */
     .navbar-top {
-        flex-wrap: wrap;
-        justify-content: space-between;
+        padding: 10px;
     }
 
-    .navbar .logo-container, .navbar .visitor-info, .navbar .actions {
-        margin-bottom: 10px;
+    .visitor-info {
+        margin-left: 20px;
+    }
+
+    /* Dashboard adjustments */
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15px;
+    }
+
+    .glance-card {
+        grid-column: span 1;
+    }
+
+    /* Carousels */
+    .spotlight-carousel,
+    .departments-carousel,
+    .events-carousel {
+        gap: 15px;
+        padding: 5px;
+    }
+
+    .spotlight-item img,
+    .department-item img {
+        width: 250px;
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Navbar mobile styling */
+    .navbar-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo-container {
+        margin: 5px 0;
+    }
+
+    .visitor-info {
+        margin-left: 0;
+        text-align: center;
     }
 
     .search-container {
         width: 100%;
+        max-width: 300px;
     }
 
-    .orders-section ul {
-        padding-left: 0;
+    .actions {
+        width: 100%;
+        justify-content: center;
     }
 
-    .orders-section ul li {
-        list-style: none;
+    /* Navigation menu */
+    .navbar-menu ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .navbar-menu ul li {
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Container sections */
+    .container {
+        padding: 10px;
+    }
+
+    .news-section,
+    .events-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .vertical-divider {
+        display: none;
+    }
+
+    /* Plant manager section */
+    .plant-manager-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .plant-manager-image img {
+        width: 200px;
+    }
+
+    .section-title {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    /* Dashboard */
+    .dashboard {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Further refinements for small screens */
+    .hazira-text {
+        font-size: 16px;
+    }
+
+    .plant-text {
+        font-size: 14px;
+    }
+
+    .search-container input {
+        width: 100%;
+    }
+
+    /* Carousels */
+    .spotlight-item img,
+    .department-item img {
+        width: 200px;
+        height: 140px;
+    }
+
+    .event img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Orders section */
+    .order-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .order-item .icon {
         margin-bottom: 10px;
+    }
+
+    .new-badge {
+        margin-top: 10px;
+    }
+
+    /* Duty container */
+    .duty-container {
+        width: 100%;
+    }
+}
+
+/* Additional responsive improvements */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    touch-action: manipulation;
+}
+
+/* Improved touch targets for mobile */
+@media screen and (max-width: 768px) {
+    a, button {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 10px;
+    }
+
+    .carousel-navigation button {
+        padding: 12px 20px;
+        margin: 0 5px;
+    }
+
+    .play-button {
+        width: 100%;
+        max-width: 200px;
     }
 }
