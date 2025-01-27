@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
 
 html,body {
     width: 100%;
@@ -21,6 +25,7 @@ body {
     border-bottom: 3px solid #d32f2f;
     font-size: 14px;
     overflow: hidden;
+    position:relative;
 }
 
 .navbar-top {
@@ -29,6 +34,7 @@ body {
     align-items: center;
     padding: 10px 20px;
     background-color: #f8d9d9;
+    flex-wrap: wrap;
 }
 
 .logo-container {
@@ -86,12 +92,14 @@ body {
     align-items: center;
     gap: 5px;
     margin-left: auto;
+    flex-wrap: wrap;
 }
 
 .search-container input {
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    min-width: 200px;
 }
 
 .search-btn {
@@ -141,6 +149,10 @@ body {
 .navbar-menu {
     background-color: #962b29;
     padding: 10px 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar-menu ul {
@@ -150,22 +162,35 @@ body {
     margin: 0;
     padding: 0;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .navbar-menu ul li {
     margin: 0;
+    padding: 5px 0;
 }
 
 .navbar-menu ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 14px;
+    display: block;
+    white-space: nowrap;
+    position: relative;
 }
 
 .navbar-menu ul li a:hover {
     text-decoration: underline;
 }
-
+.navbar-menu ul li a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    right: 12px;
+    height: 2px;
+    background-color: #f8d9d9;
+}
 .cont3 {
     display: flex;
     justify-content: center;
@@ -299,11 +324,12 @@ body {
 
 .section-title {
     display: flex;
-    margin-left: 125px;
+   
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
     color: #333;
+    align-items: flex-start;
 }
 
 .plant-manager-content {
@@ -494,21 +520,25 @@ body {
 }
 
 .birthday-card {
-    grid: span1;
-
     background: #fae5d7;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
     overflow: hidden;
+
 }
 
 
 .birthday-list {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: white;
+
 
 }
 
@@ -516,7 +546,9 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
 }
 
 .birthday-item img {
@@ -777,7 +809,9 @@ body {
         padding: 10px;
         margin: 0;
     }
-    
+    .birthday-card {
+        grid-area: span 1/span 2;
+    }
     .plant-manager-container {
         width: 100%;
         padding: 10px;
@@ -924,6 +958,7 @@ body {
 @media screen and (max-width: 768px) {
     .navbar-top {
         flex-direction: column;
+        align-items: center;
         gap: 15px;
     }
 
@@ -932,8 +967,9 @@ body {
     }
 
     .visitor-info {
-        margin-left: 0;
+        margin-left:10px 0;
         text-align: center;
+        width: 100%;
     }
 
     .search-container {
@@ -946,6 +982,10 @@ body {
         width: 100%;
         justify-content: center;
         flex-wrap: wrap;
+        margin: 10px 0;
+    }
+    html {
+        scroll-padding-top: 70px;
     }
 
     .navbar-menu ul {
@@ -958,6 +998,15 @@ body {
         text-align: center;
         padding: 8px 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+     .navbar-menu ul li a {
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-menu ul li a:hover::after {
+        left: 0;
+        right: 0;
     }
 
     .plant-manager-content {
@@ -1022,6 +1071,7 @@ body {
         width: 100%;
     }
 }
+
 
 /* Touch Device Optimizations */
 @media (hover: none) {
@@ -1094,4 +1144,24 @@ body {
 .departments-carousel::-webkit-scrollbar,
 .events-carousel::-webkit-scrollbar {
     display: none;
+}
+/* Add at the end of your file */
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
 }
