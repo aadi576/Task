@@ -30,11 +30,21 @@ body {
 
 .navbar-top {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background-color: #f8d9d9;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+}
+
+.left-navbar{
+
+}
+
+.right-navbar{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .logo-container {
@@ -79,7 +89,8 @@ body {
     text-align: right;
     color: #555;
     font-size: 12px;
-    margin-left: 800px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 
 .visitor-info .visitor-count {
@@ -88,11 +99,9 @@ body {
 }
 
 .search-container {
-    display: flex;
     align-items: center;
-    gap: 5px;
-    margin-left: auto;
-    flex-wrap: wrap;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 
 .search-container input {
@@ -112,9 +121,9 @@ body {
 }
 
 .actions {
-    display: flex;
     align-items: center;
-    gap: 10px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 
 .actions .divider {
@@ -746,7 +755,7 @@ body {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 20px;
     padding: 20px;
 }
@@ -805,6 +814,8 @@ body {
     .dashboard,
     .orders-section,
     .footer-content {
+        display: flex;
+        flex-direction: column;
         width: 100%;
         padding: 10px;
         margin: 0;
@@ -892,12 +903,13 @@ body {
 
 .footer-content {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     gap: 30px;
+    height: 600px;
 }
 
 .footer-section {
@@ -962,6 +974,16 @@ body {
         gap: 15px;
     }
 
+    .left-navbar{
+
+    }
+    
+    .right-navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
     .logo-container {
         margin: 5px 0;
     }
@@ -973,17 +995,21 @@ body {
     }
 
     .search-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start ;
         width: 100%;
         max-width: 300px;
         margin: 10px auto;
     }
-
+    
     .actions {
+        display: flex;
         width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
         margin: 10px 0;
+        justify-content: space-evenly;
     }
+
     html {
         scroll-padding-top: 70px;
     }
